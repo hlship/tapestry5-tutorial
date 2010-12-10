@@ -1,0 +1,11 @@
+<html t:type="layout" title="Hi/Lo Guess"
+  xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+
+  <p>
+    I'm thinking of a number between one and ten ... </p>
+
+  <p>
+    <t:actionlink t:id="start">start guessing</t:actionlink>
+  </p>
+
+</html>
