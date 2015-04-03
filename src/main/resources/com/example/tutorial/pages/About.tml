@@ -1,7 +1,23 @@
 <html t:type="layout" title="About tutorial1"
-      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
       xmlns:p="tapestry:parameter">
 
-    <p>About tutorial1 application ...</p>
+    <div class="row">
+        <div class="span12">
+            <p>About tutorial1 application ...</p>
+        </div>
+    </div>
+
+    <t:if test="learn">
+        <div class="row">
+            <div class="span12">
+                <p>
+                    To learn more go to
+                    <a href="http://tapestry.apache.org">Tapestry home</a>
+                    and start typing...
+                </p>
+            </div>
+        </div>
+    </t:if>
 
 </html>

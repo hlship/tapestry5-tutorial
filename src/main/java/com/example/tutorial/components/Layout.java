@@ -1,44 +1,52 @@
 package com.example.tutorial.components;
 
 import org.apache.tapestry5.*;
+import org.apache.tapestry5.alerts.AlertManager;
 import org.apache.tapestry5.annotations.*;
+import org.apache.tapestry5.corelib.components.Form;
+import org.apache.tapestry5.corelib.components.PasswordField;
+import org.apache.tapestry5.corelib.components.TextField;
+import org.apache.tapestry5.corelib.components.Zone;
 import org.apache.tapestry5.ioc.annotations.*;
 import org.apache.tapestry5.BindingConstants;
+import org.apache.tapestry5.SymbolConstants;
 
 /**
- * Layout component for pages of application tutorial1.
+ * Layout component for pages of application test-project.
  */
-@IncludeStylesheet("context:layout/layout.css")
+@Import(module="bootstrap/collapse")
 public class Layout
 {
-    /** The page title, for the <title> element and the <h1> element. */
-    @Property
-    @Parameter(required = true, defaultPrefix = BindingConstants.LITERAL)
-    private String title;
+	@Inject
+	private ComponentResources resources;
 
-    @Property
-    private String pageName;
+	/**
+	 * The page title, for the <title> element and the <h1> element.
+	 */
+	@Property
+	@Parameter(required = true, defaultPrefix = BindingConstants.LITERAL)
+	private String title;
 
-    @Property
-    @Parameter(defaultPrefix = BindingConstants.LITERAL)
-    private String sidebarTitle;
+	@Property
+	private String pageName;
 
-    @Property
-    @Parameter(defaultPrefix = BindingConstants.LITERAL)
-    private Block sidebar;
+	@Property
+	@Inject
+	@Symbol(SymbolConstants.APPLICATION_VERSION)
+	private String appVersion;
 
-    @Inject
-    private ComponentResources resources;
 
-    public String getClassForPageName()
-    {
-      return resources.getPageName().equalsIgnoreCase(pageName)
-             ? "current_page_item"
-             : null;
-    }
 
-    public String[] getPageNames()
-    {
-      return new String[] { "Index", "About", "Contact" };
-    }
+	public String getClassForPageName()
+	{
+		return resources.getPageName().equalsIgnoreCase(pageName)
+				? "active"
+				: null;
+	}
+
+	public String[] getPageNames()
+	{
+		return new String[]{"Index", "About", "Contact"};
+	}
+
 }
