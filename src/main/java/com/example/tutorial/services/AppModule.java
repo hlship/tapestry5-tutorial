@@ -1,8 +1,6 @@
 package com.example.tutorial.services;
 
-import java.io.IOException;
-
-import org.apache.tapestry5.*;
+import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.OrderedConfiguration;
 import org.apache.tapestry5.ioc.ServiceBinder;
@@ -10,11 +8,13 @@ import org.apache.tapestry5.ioc.annotations.Contribute;
 import org.apache.tapestry5.ioc.annotations.Local;
 import org.apache.tapestry5.ioc.services.ApplicationDefaults;
 import org.apache.tapestry5.ioc.services.SymbolProvider;
-import org.apache.tapestry5.services.*;
-import org.apache.tapestry5.services.javascript.JavaScriptStack;
-import org.apache.tapestry5.services.javascript.StackExtension;
-import org.apache.tapestry5.services.javascript.StackExtensionType;
+import org.apache.tapestry5.services.Request;
+import org.apache.tapestry5.services.RequestFilter;
+import org.apache.tapestry5.services.RequestHandler;
+import org.apache.tapestry5.services.Response;
 import org.slf4j.Logger;
+
+import java.io.IOException;
 
 /**
  * This module is automatically included as part of the Tapestry IoC Registry, it's a good place to
