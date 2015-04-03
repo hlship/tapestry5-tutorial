@@ -65,7 +65,6 @@ public class AppModule
 	public static void setupEnvironment(MappedConfiguration<String, Object> configuration)
 	{
 		configuration.add(SymbolConstants.JAVASCRIPT_INFRASTRUCTURE_PROVIDER, "jquery");
-//		configuration.add(SymbolConstants.BOOTSTRAP_ROOT, "context:mybootstrap");
 		configuration.add(SymbolConstants.MINIFICATION_ENABLED, true);
 	}
 
