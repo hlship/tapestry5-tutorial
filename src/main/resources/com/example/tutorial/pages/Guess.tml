@@ -1,0 +1,28 @@
+<html t:type="layout" title="Guess The Number"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <p>
+        The secret number is: ${target}.
+    </p>
+
+    <strong>Guess number ${guessCount}</strong>
+
+    <t:if test="message">
+        <p>
+            <strong>${message}</strong>
+        </p>
+    </t:if>
+
+    <p>Make a guess from the options below:</p>
+
+    <ul class="list-inline">
+        <t:loop source="1..10" value="current">
+            <li>
+                <t:actionlink t:id="makeGuess" context="current">${current}
+                </t:actionlink>
+            </li>
+        </t:loop>
+    </ul>
+
+</html>

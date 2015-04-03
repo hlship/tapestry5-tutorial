@@ -5,7 +5,7 @@
         I'm thinking of a number between one and ten ...
     </p>
     <p>
-        <a href="#">start guessing</a>
+        <t:actionlink t:id="start">start guessing</t:actionlink>
     </p>
 
 </html>
