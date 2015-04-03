@@ -66,6 +66,8 @@ public class AppModule
 	{
 		configuration.add(SymbolConstants.JAVASCRIPT_INFRASTRUCTURE_PROVIDER, "jquery");
 		configuration.add(SymbolConstants.MINIFICATION_ENABLED, true);
+        // Set the HMAC pass phrase to secure object data serialized to client
+        configuration.add(SymbolConstants.HMAC_PASSPHRASE, "keep this secret");
 	}
 
 	/*
