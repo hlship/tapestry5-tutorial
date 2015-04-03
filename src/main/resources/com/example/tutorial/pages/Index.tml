@@ -5,7 +5,14 @@
         I'm thinking of a number between one and ten ...
     </p>
     <p>
-        <t:actionlink t:id="start">start guessing</t:actionlink>
+        <t:actionlink t:id="start" class="btn btn-primary">start guessing</t:actionlink>
     </p>
+
+
+    <h1>Address Book</h1>
+
+    <ul>
+        <li><t:pagelink page="address/create" class="btn btn-primary">Create new address</t:pagelink></li>
+    </ul>
 
 </html>

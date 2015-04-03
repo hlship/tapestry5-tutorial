@@ -11,8 +11,7 @@
     <!-- Le styles -->
     <style type="text/css">
         body {
-            padding-top: 60px;
-            padding-bottom: 40px;
+            padding-top: 80px;
         }
     </style>
 
@@ -56,6 +55,7 @@
 
     <footer>
         <p>&copy; Your Company 2015</p>
+
     </footer>
 
 </div> <!-- /container -->
